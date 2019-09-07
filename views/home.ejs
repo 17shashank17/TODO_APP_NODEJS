@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/assets/style.css" type="text/css">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+    </script>
+    <script src="/assets/ajax.js"></script>
+    <title>ToDO APp</title>
+</head>
+<body>
+    <h1>Welcome to TODO App </h1>
+    <div id="todo-table">
+        <form>
+            <input type="text" name="items" placeholder="Add new reminders..." id="items" required/>
+            <button type="submit">Add Reminder</button>
+        </form>
+        <ul>
+            <% for(var i=0;i<data.length;i++) {%>
+                <li><%= data[i].items %></li>
+            <% } %>
+        </ul>
+    </div>
+</body>
+</html>
